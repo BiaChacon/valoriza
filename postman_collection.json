@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "eace9bb4-5236-475c-9e4f-1d177c1474c9",
+		"name": "NLW 6.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bia\",\n    \"email\": \"biachacondev@gmail.com\",\n    \"password\": \"12345\",\n    \"admin\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bia\",\n    \"email\": \"biachacondev@gmail.com\",\n    \"admin\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b8-ND+GjOaaB0VGswbA1l3JpY837RA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c42b795f-7d99-4829-b5e9-57d020a6f00d\",\n    \"name\": \"Bia\",\n    \"email\": \"biachacondev@gmail.com\",\n    \"admin\": true,\n    \"created_at\": \"2021-06-26T15:17:57.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:57.000Z\"\n}"
+				},
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bia\",\n    \"email\": \"biachacondev@gmail.com\",\n    \"admin\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b8-ND+GjOaaB0VGswbA1l3JpY837RA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c42b795f-7d99-4829-b5e9-57d020a6f00d\",\n    \"name\": \"Bia\",\n    \"email\": \"biachacondev@gmail.com\",\n    \"admin\": true,\n    \"created_at\": \"2021-06-26T15:17:57.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:57.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"biachacondev@gmail.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpYWNoYWNvbmRldkBnbWFpbC5jb20iLCJpYXQiOjE2MjQ3MzQ0ODEsImV4cCI6MTYyNDgyMDg4MSwic3ViIjoiNmRlNDhiOTEtNGRiNC00NDA1LWFmZmEtOWI4OTBlOWEzOTAyIn0.wiRVX2MINjRfrPELlHILKOuwePg25I771Snw1X-r2uE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"liderança\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/tags",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"liderança\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"91-kpr+dvkWl6QohDLVSgOHXRAjN2A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 19:08:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"ffec5c79-a5c1-4dcb-9b10-6651a35d757c\",\n    \"name\": \"liderança\",\n    \"created_at\": \"2021-06-26T19:08:22.000Z\",\n    \"updated_at\": \"2021-06-26T19:08:22.000Z\"\n}"
+				},
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"inspiração\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-P1J6IKWf/dnssX8rO+jBEncuGzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c34d6a82-29e1-419a-84e2-684892980bf6\",\n    \"name\": \"inspiração\",\n    \"created_at\": \"2021-06-26T15:17:11.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:11.000Z\"\n}"
+				},
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"inspiração\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-P1J6IKWf/dnssX8rO+jBEncuGzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c34d6a82-29e1-419a-84e2-684892980bf6\",\n    \"name\": \"inspiração\",\n    \"created_at\": \"2021-06-26T15:17:11.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:11.000Z\"\n}"
+				},
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"liderança\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"91-kpr+dvkWl6QohDLVSgOHXRAjN2A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 19:08:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"ffec5c79-a5c1-4dcb-9b10-6651a35d757c\",\n    \"name\": \"liderança\",\n    \"created_at\": \"2021-06-26T19:08:22.000Z\",\n    \"updated_at\": \"2021-06-26T19:08:22.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Compliment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpYWNoYWNvbmRldkBnbWFpbC5jb20iLCJpYXQiOjE2MjQ3MzQ0ODEsImV4cCI6MTYyNDgyMDg4MSwic3ViIjoiNmRlNDhiOTEtNGRiNC00NDA1LWFmZmEtOWI4OTBlOWEzOTAyIn0.wiRVX2MINjRfrPELlHILKOuwePg25I771Snw1X-r2uE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"tag_id\": \"3865fd53-64c9-4180-bbc9-9fb9368b48d6\",\n    \"user_receiver\": \"a33b9969-b8cc-438f-ab7b-ad3ea2a61bb7\",\n    \"message\": \"Obrigada :)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/compliments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"compliments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"inspiração\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-P1J6IKWf/dnssX8rO+jBEncuGzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c34d6a82-29e1-419a-84e2-684892980bf6\",\n    \"name\": \"inspiração\",\n    \"created_at\": \"2021-06-26T15:17:11.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:11.000Z\"\n}"
+				},
+				{
+					"name": "Create Tag",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"inspiração\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-P1J6IKWf/dnssX8rO+jBEncuGzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Jun 2021 15:17:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"c34d6a82-29e1-419a-84e2-684892980bf6\",\n    \"name\": \"inspiração\",\n    \"created_at\": \"2021-06-26T15:17:11.000Z\",\n    \"updated_at\": \"2021-06-26T15:17:11.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpYWNoYWNvbmRldkBnbWFpbC5jb20iLCJpYXQiOjE2MjQ3MzY0NDIsImV4cCI6MTYyNDgyMjg0Miwic3ViIjoiNmRlNDhiOTEtNGRiNC00NDA1LWFmZmEtOWI4OTBlOWEzOTAyIn0.8r9g3gH_6tjxkPX62r9moNwsiATXRwODfF8zlJXKbCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Send Compliments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpYWNoYWNvbmRldkBnbWFpbC5jb20iLCJpYXQiOjE2MjQ3MzY0NDIsImV4cCI6MTYyNDgyMjg0Miwic3ViIjoiNmRlNDhiOTEtNGRiNC00NDA1LWFmZmEtOWI4OTBlOWEzOTAyIn0.8r9g3gH_6tjxkPX62r9moNwsiATXRwODfF8zlJXKbCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/compliments/send",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"compliments",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Receive Compliments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJpYWNoYWNvbmRldkBnbWFpbC5jb20iLCJpYXQiOjE2MjQ3MzY0NDIsImV4cCI6MTYyNDgyMjg0Miwic3ViIjoiNmRlNDhiOTEtNGRiNC00NDA1LWFmZmEtOWI4OTBlOWEzOTAyIn0.8r9g3gH_6tjxkPX62r9moNwsiATXRwODfF8zlJXKbCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/compliments/receive",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"compliments",
+						"receive"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
